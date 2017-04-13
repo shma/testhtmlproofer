@@ -9,7 +9,7 @@ machine:
 dependencies:
     override:
       - npm install
-      - gem install html-proofer
+      - bundle install
 
     post:
         - sudo pip install awscli
