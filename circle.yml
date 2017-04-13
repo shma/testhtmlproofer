@@ -5,7 +5,6 @@ machine:
     - npm install -g npm@3
     - npm rebuild node-sass
   timezone: Asia/Tokyo
-
 dependencies:
     override:
       - npm install
@@ -14,8 +13,6 @@ dependencies:
     post:
         - sudo pip install awscli
         - aws configure set region ap-northeast-1
-
-
 deployment:
   production:
    branch: master
@@ -27,5 +24,5 @@ deployment:
 test:
   override:
     - echo "test"
-    - bundle exec htmlproofer ./html --check-html --disable-external
+    - bundle exec htmlproofer ./html
 
