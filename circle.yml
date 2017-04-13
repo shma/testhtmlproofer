@@ -1,0 +1,30 @@
+machine:
+  node:
+    version: 6.2.2
+  post:
+    - npm install -g npm@3
+    - npm rebuild node-sass
+  timezone: Asia/Tokyo
+
+dependencies:
+    override:
+      - npm install
+      - gem install html-proof
+
+    post:
+        - sudo pip install awscli
+        - aws configure set region ap-northeast-1
+
+
+deployment:
+  production:
+   branch: master
+   commands:
+
+  staging:
+    branch: develop
+    commands:
+test:
+  override:
+    - echo "test"
+
