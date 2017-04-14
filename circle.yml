@@ -17,10 +17,11 @@ deployment:
   production:
    branch: master
    commands:
+      - bundle exec htmlproofer ./html --check-html --disable-external
 
   staging:
     branch: develop
     commands:
+      - bundle exec htmlproofer ./html --check-html --disable-external
 test:
   override:
-    - bundle exec htmlproofer ./html --check-html --disable-external
