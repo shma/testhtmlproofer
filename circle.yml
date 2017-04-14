@@ -17,7 +17,9 @@ deployment:
   production:
    branch: master
    commands:
+      - echo "before"
       - bundle exec htmlproofer ./html --check-html --disable-external
+      - echo "after"
 
   staging:
     branch: develop
