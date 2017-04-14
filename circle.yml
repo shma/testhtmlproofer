@@ -23,6 +23,4 @@ deployment:
     commands:
 test:
   override:
-    - echo "test"
-    - bundle exec htmlproofer ./html
-
+    - bundle exec htmlproofer ./html --check-html --disable-external
